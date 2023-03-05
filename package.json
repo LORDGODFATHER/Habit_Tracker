@@ -1,0 +1,35 @@
+{
+  "name": "habit_tracker",
+  "version": "1.0.0",
+  "description": "A simple habit tracking app based on NodeJS + EJS for user habit management on daily and weekly basis.",
+  "main": "app.js",
+  "scripts": {
+    "habit-scss": "sass --no-source-map --watch assets/sass/habit.scss assets/css/habit.css",
+    "home-scss": "sass --no-source-map --watch assets/sass/home.scss assets/css/home.css",
+    "layout-scss": "sass --no-source-map --watch assets/sass/layout.scss assets/css/layout.css",
+    "server": "nodemon app.js -e *",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all --parallel habit-scss home-scss layout-scss server"
+  },
+  "keywords": [
+    "Habit_Tracker",
+    "EJS",
+    "Nodejs",
+    "MongoDB"
+  ],
+  "author": "Ayush Garg",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "moment": "^2.27.0",
+    "mongoose": "^5.10.1",
+    "sass": "^1.58.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21",
+    "npm-run-all": "^4.1.5"
+  }
+}
